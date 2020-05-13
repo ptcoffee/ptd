@@ -200,9 +200,8 @@ module.exports = {
     },
     fontFamily: {
       sans: [
-        'Oswald',
-        'system-ui',
         '-apple-system',
+        'system-ui',     
         'BlinkMacSystemFont',
         '"Segoe UI"',
         'Roboto',
