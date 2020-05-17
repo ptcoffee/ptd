@@ -1,28 +1,27 @@
 ---
 name: Button
+route: /button
 ---
 
-import { Playground } from 'docz';
-import { Button, ButtonType } from './Button';
+import { Playground } from "docz";
+import { Button, ButtonType } from ".";
 
 # Button
 
 Button has 3 styles: Primary, Secondary and Outlined
 
 <Playground>
-  <Button title="Primary" type={ButtonType.PRIMARY} />
-  <Button title="Secondary" type={ButtonType.SECONDARY} />
-  <Button title="Outlined" type={ButtonType.OUTLINED} />
+  <Button primary title="Primary" />
+  <Button secondary title="Secondary" />
+  <Button minmal title="Minimal" />
 </Playground>
 
-#
+---
 
-<br />
-
-**Button large size**
+## Large size
 
 <Playground>
-  <Button large title="Primary" type={ButtonType.PRIMARY} />
-  <Button large title="Secondary" type={ButtonType.SECONDARY} />
-  <Button large title="Outlined" type={ButtonType.OUTLINED} />
+  <Button primary large title="Primary" />
+  <Button secondary large title="Secondary" />
+  <Button minimal large title="Minimal" />
 </Playground>

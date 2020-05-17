@@ -1,3 +1,39 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+:root {
+  --gray-50: #fafafa;
+  --gray-100: #eeeded;
+  --gray-200: #e1e0e0;
+  --gray-300: #d4d3d1;
+  --gray-400: #c5c3c2;
+  --gray-500: #b5b3b0;
+  --gray-600: #a29f9c;
+  --gray-700: #8c8885;
+  --gray-800: #706b67;
+  --gray-900: #443e39;
+
+  --primary-50: #fffbeb;
+  --primary-100: #ffedc2;
+  --primary-200: #fed267;
+  --primary-300: #fdc63f;
+  --primary-400: #fdb811;
+  --primary-500: #f5ad00;
+  --primary-600: #96612c;
+  --primary-700: #835020;
+  --primary-800: #673c19;
+  --primary-900: #4e2b13;
+}
+
+h1 {
+  @apply text-3xl;
+}
+h2 {
+  @apply text-2xl;
+}
+h3 {
+  @apply text-xl;
+}

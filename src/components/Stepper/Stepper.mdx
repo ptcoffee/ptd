@@ -1,14 +1,64 @@
 ---
 name: Stepper
+route: /stepper
 ---
 
-import { Stepper } from './Stepper';
-import { Playground } from 'docz';
+import { Stepper } from ".";
+import { Button, ButtonType } from "../Button";
+import { Playground, Props } from "docz";
 
 # Stepper
 
-**Linear Stepper**
+Stepper is a component to display the progress for multiple steps to achieve some goal. Stepper let user foresee the whole process and make them feel faster to complete.
+
+## Props
+
+<Props of={Stepper} />
+
+## Vertical
+
+Belows is stepper for order status
 
 <Playground>
-  <Stepper steps={['Placed', 'Processing', 'Completed']} current="Processing" />
+  <Stepper current={1}>
+    {Object.entries({
+      placed: new Date(),
+      pending: new Date(),
+      completed: null,
+    }).map(([status, time]) => (
+      <div className="mb-6" key={status}>
+        <div className="text-base">
+          {
+            {
+              placed: "Đã đặt hàng",
+              pending: "Đang xử lí",
+              completed: "Hoàn tất",
+            }[status]
+          }
+        </div>
+        <div className="text-sm text-gray-8">
+          {time && time.toLocaleString()}
+          <div>{status === "pending" && "Đơn hàng gặp vấn đề thanh toán"}</div>
+          <div>
+            {status === "pending" &&
+              "Nhân viên của chúng tôi sẽ gọi cho bạn sớm nhất để xác nhận đơn hàng"}
+          </div>
+        </div>
+      </div>
+    ))}
+  </Stepper>
+</Playground>
+
+---
+
+## Horizontal
+
+A stepper might have horizontal style using props horizontal
+
+<Playground>
+  <Stepper horizontal current={1}>
+    <div>Đăng nhập</div>
+    <div>Đặt hàng</div>
+    <div>Giao hàng</div>
+  </Stepper>
 </Playground>
