@@ -1,0 +1,59 @@
+---
+name: Stepper
+---
+
+import { Stepper, Step } from ".";
+import { Button, ButtonType } from "../Button";
+import { Playground, Props } from "docz";
+
+# Props
+
+<Props of={Stepper} />
+
+# Stepper
+
+Belows is stepper for order status
+
+<Playground>
+  <Stepper current={1}>
+    {Object.entries({
+      placed: new Date(),
+      pending: new Date(),
+      completed: "Sẽ cập nhật khi giao hàng hoàn tất",
+    }).map(([status, time]) => (
+      <div className="mb-6" key={status}>
+        <div className="text-base">
+          {
+            {
+              placed: "Đã đặt hàng",
+              pending: "Đang xử lí",
+              completed: "Hoàn tất",
+            }[status]
+          }
+        </div>
+        <div className="text-sm text-gray-8">
+          {time.toLocaleString()}
+          <div>{status === "pending" && "Đơn hàng gặp vấn đề thanh toán"}</div>
+          <div>
+            {status === "pending" &&
+              "Nhân viên của chúng tôi sẽ gọi cho bạn sớm nhất để xác nhận đơn hàng"}
+          </div>
+        </div>
+      </div>
+    ))}
+  </Stepper>
+</Playground>
+
+---
+
+# Horizontal
+
+A stepper might have horizontal style using props horizontal
+
+<Playground>
+  <Stepper horizontal current={1}>
+    <div>Đăng nhập</div>
+    <div>Đặt hàng</div>
+    <div>Giao hàng</div>
+  </Stepper>
+</Playground>

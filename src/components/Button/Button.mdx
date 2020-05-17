@@ -1,0 +1,54 @@
+---
+name: Button
+---
+
+import { Playground } from 'docz';
+import { Button, ButtonType} from '.';
+
+# Button
+
+Button has 5 styles: Primary, Secondary, Outlined, Minimal1 and Minimal2
+
+<Playground>
+    <Button title="Primary" type={ButtonType.PRIMARY} />
+    <Button title="Secondary" type={ButtonType.SECONDARY} />
+    <Button title="Outlined" type={ButtonType.OUTLINED} />
+    <Button title="Minimal" type={ButtonType.MINIMAL1} />
+    <Button title="Minimal" type={ButtonType.MINIMAL2} />
+</Playground>
+
+<br />
+
+**Button large size**
+
+<Playground>
+    <Button large title="Primary" type={ButtonType.PRIMARY} />
+    <Button large title="Secondary" type={ButtonType.SECONDARY} />
+    <Button large title="Outlined" type={ButtonType.OUTLINED} />
+    <Button large title="Minimal" type={ButtonType.MINIMAL1} />
+    <Button large title="Minimal" type={ButtonType.MINIMAL2} />
+</Playground>
+
+<br />
+
+**Button disabled**
+
+<Playground>
+    <Button disabled title="Primary" type={ButtonType.PRIMARY} />
+    <Button disabled title="Secondary" type={ButtonType.SECONDARY} />
+    <Button disabled title="Outlined" type={ButtonType.OUTLINED} />
+    <Button disabled title="Minimal" type={ButtonType.MINIMAL1} />
+    <Button disabled title="Minimal" type={ButtonType.MINIMAL2} />
+</Playground>
+
+<br/>
+
+**Icon Button**
+
+<Playground>
+    <Button  title="Download" icon='download' type={ButtonType.PRIMARY} />
+    <Button  title="Download" icon='download' disabled type={ButtonType.PRIMARY} />
+    <Button  icon='download' type={ButtonType.SECONDARY} />
+    <Button  title="Minimal" icon='home'  type={ButtonType.MINIMAL2} />
+
+</Playground>
