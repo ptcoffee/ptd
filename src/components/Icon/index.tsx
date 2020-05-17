@@ -1,8 +1,8 @@
-import * as React from 'react';
-import cx from 'classnames';
+import * as React from "react";
+import cx from "classnames";
 
-import * as box from './box';
-import * as home from './home';
+import * as box from "./box";
+import * as home from "./home";
 
 export enum IconName {
   BOX,
@@ -24,7 +24,7 @@ export const Icon: React.FC<Props> = props => {
   return (
     <img
       alt="icon"
-      className={cx('inline mr-2', props.large ? 'w-12 h-12' : 'w-8 h-8')}
+      className={cx("inline mr-2", props.large ? "w-12 h-12" : "w-8 h-8")}
       src={props.large ? icon.large : icon.normal}
     />
   );
