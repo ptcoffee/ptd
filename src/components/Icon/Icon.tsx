@@ -24,7 +24,7 @@ export const Icon: React.FC<Props> = props => {
   return (
     <img
       alt="icon"
-      className={cx('inline mr-2 w-8 h-8', props.large && 'w-12 h-12')}
+      className={cx('inline mr-2', props.large ? 'w-12 h-12' : 'w-8 h-8')}
       src={props.large ? icon.large : icon.normal}
     />
   );
