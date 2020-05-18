@@ -2,7 +2,7 @@ import * as React from "react";
 import cx from "classnames";
 
 interface Props {
-  current?: number;
+  current: number;
   className?: string;
   children: React.ReactNode[];
   horizontal?: boolean;
@@ -63,5 +63,3 @@ export const Stepper: React.FC<Props> = props => {
     </div>
   );
 };
-
-// export { Step } from "./Step";
